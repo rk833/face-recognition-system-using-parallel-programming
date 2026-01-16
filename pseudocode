@@ -1,0 +1,45 @@
+ALGORITHM DynamicParallelFaceRecognition
+
+    LOAD known face image
+    EXTRACT known face encoding
+
+    SCAN image folder
+    FILTER valid image files
+
+    GET available CPU cores
+    DETERMINE optimal number of workers and chunk size 
+        based on dataset size and cores
+
+    ANALYSE workload distribution
+
+    CREATE process pool with optimal workers
+    PARALLEL MAP ProcessSingleImage to all filenames 
+        USING calculated chunk size
+
+    COLLECT results
+    REMOVE all None values
+
+    DISPLAY matched filenames
+    DISPLAY total time and performance statistics
+
+END ALGORITHM
+
+
+FUNCTION ProcessSingleImage(filename)
+
+    START timer
+
+    LOAD image
+    DETECT face locations
+    EXTRACT face encodings
+
+    FOR each detected face
+        COMPARE with known encoding
+        IF match found
+            SAVE image with bounding box
+            RETURN filename, processing_time
+    END FOR
+
+    RETURN None
+
+END FUNCTION

@@ -1,0 +1,72 @@
+site_name: Face Recognition System using Parallel Programming
+site_description: Parallel and Serial Face Recognition Documentation
+site_author: Ridesha Khadka
+site_url: https://github.com/rk833/face-recognition-system-using-parallel-programming
+
+theme:
+  name: material
+  language: en
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src", "."]
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            separate_signature: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - attr_list
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Main Program: main.md
+  - Parallel Recognizer: recognizer.md
+  - Serial Implementation: serial.md
+  - Utilities: utils.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rk833/face-recognition-system-using-parallel-programming
+
+extra_css:
+  - styles/extra.css
