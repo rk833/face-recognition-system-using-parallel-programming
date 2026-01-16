@@ -1,0 +1,65 @@
+/* Root font variables */
+:root {
+  --md-text-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --md-code-font: "Fira Code", "JetBrains Mono", Consolas, monospace;
+}
+
+/* Body text */
+.md-typeset {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.75;
+  letter-spacing: 0.1px;
+}
+
+/* Headings */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Main title */
+.md-typeset h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid rgba(124, 58, 237, 0.35);
+  padding-bottom: 0.3em;
+}
+
+/* Section spacing */
+.md-typeset h2 {
+  margin-top: 1.6em;
+}
+
+/* Sidebar */
+.md-nav__title,
+.md-nav__link {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* Code blocks */
+.md-typeset code,
+.md-typeset pre {
+  font-family: "Fira Code", monospace;
+  font-size: 0.85em;
+}
+
+/* Header polish */
+.md-header {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  backdrop-filter: blur(6px);
+}
+
+/* Content cards (Material theme sections) */
+.md-content__inner {
+  padding-top: 1.2rem;
+}
+
+/* Table cleanup */
+.md-typeset table {
+  font-size: 0.9rem;
+}
