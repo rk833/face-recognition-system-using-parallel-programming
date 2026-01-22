@@ -42,7 +42,7 @@ plugins:
             show_source: true
             show_root_heading: true
             show_root_full_path: false
-            separate_signature: true
+            separate_signature: true 
 
 markdown_extensions:
   - admonition
